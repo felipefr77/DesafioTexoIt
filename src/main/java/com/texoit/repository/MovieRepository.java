@@ -7,4 +7,5 @@ import com.texoit.model.Movie;
 
 @Repository
 public interface MovieRepository extends JpaRepository<Movie, Long> {
+	
 }
