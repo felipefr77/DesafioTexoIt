@@ -13,17 +13,61 @@ public class Movie {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-//	private Integer nrAno;
+	@Column(nullable = false)
+	private Integer ano;
 	
 	@Column(nullable = false)
-	private String nome;
+	private String titulo;
+	
+	@Column(nullable = false)
+	private String estudio;
+	
+	@Column(nullable = false)
+	private String produtor;
+	
+	private boolean vencedor;
 
-	public String getNome() {
-		return nome;
+	public Long getId() {
+		return id;
 	}
 
-	public void setNome(String nome) {
-		this.nome = nome;
+	public Integer getAno() {
+		return ano;
 	}
 	
+	public void setAno(Integer ano) {
+		this.ano = ano;
+	}
+
+	public String getTitulo() {
+		return titulo;
+	}
+
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
+	}
+
+	public String getEstudio() {
+		return estudio;
+	}
+
+	public void setEstudio(String estudio) {
+		this.estudio = estudio;
+	}
+
+	public String getProdutor() {
+		return produtor;
+	}
+
+	public void setProdutor(String produtor) {
+		this.produtor = produtor;
+	}
+
+	public boolean isVencedor() {
+		return vencedor;
+	}
+
+	public void setVencedor(boolean vencedor) {
+		this.vencedor = vencedor;
+	}
 }
