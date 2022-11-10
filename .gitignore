@@ -34,7 +34,3 @@ build/
 
 ### VS Code ###
 .vscode/
-
-###csv file ###
-movielist.csv
-

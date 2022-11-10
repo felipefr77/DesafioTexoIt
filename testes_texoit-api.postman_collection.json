@@ -1,0 +1,116 @@
+{
+	"info": {
+		"_postman_id": "081d8697-bf93-42bc-9a12-e553a9d95442",
+		"name": "texoit-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "listar",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/movies",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "consultar",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/movies/211",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"movies",
+						"211"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "adicionar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"ano\": 2020,\n    \"titulo\": \"Filme Teste 2\",\n    \"estudio\": \"Estudio Novo\",\n    \"produtor\": \"Felipe Fruhauf\",\n    \"vencedor\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/movies",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deletar",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/movies/207",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"movies",
+						"207"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listarPesquisa",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/movies/pesquisar",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"movies",
+						"pesquisar"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
