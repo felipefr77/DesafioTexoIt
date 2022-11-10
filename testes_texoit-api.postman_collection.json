@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "081d8697-bf93-42bc-9a12-e553a9d95442",
+		"_postman_id": "960402a9-8bab-4bff-9f4e-28d1c5d6f19c",
 		"name": "texoit-api",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -25,12 +25,12 @@
 			"response": []
 		},
 		{
-			"name": "consultar",
+			"name": "consultarPorId",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:8080/api/movies/211",
+					"raw": "localhost:8080/api/movies/1",
 					"host": [
 						"localhost"
 					],
@@ -38,7 +38,7 @@
 					"path": [
 						"api",
 						"movies",
-						"211"
+						"1"
 					]
 				}
 			},
@@ -93,7 +93,7 @@
 			"response": []
 		},
 		{
-			"name": "listarPesquisa",
+			"name": "pesquisar",
 			"request": {
 				"method": "GET",
 				"header": [],
