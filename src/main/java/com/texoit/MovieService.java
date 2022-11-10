@@ -19,6 +19,9 @@ public class MovieService implements ApplicationRunner{
 
 	private final MovieRepository repository;
 	
+	@Value("${api.file.path}")
+	private String caminho;
+	
 	public MovieService(MovieRepository repository) {
 		this.repository = repository;
 	}
@@ -26,7 +29,7 @@ public class MovieService implements ApplicationRunner{
 	@Override
 	public void run(ApplicationArguments args) throws Exception {
 		
-		Path path = Paths.get("movielist.csv");
+		Path path = Paths.get(caminho);
 		
 		try (Stream<String> linhas = Files.lines(path, StandardCharsets.UTF_8)) {
 	
