@@ -7,6 +7,7 @@ import java.nio.file.Paths;
 import java.util.Iterator;
 import java.util.stream.Stream;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Service;
@@ -19,6 +20,9 @@ public class MovieService implements ApplicationRunner{
 
 	private final MovieRepository repository;
 	
+	@Value("${api.file.path}")
+	private String caminho;
+	
 	public MovieService(MovieRepository repository) {
 		this.repository = repository;
 	}
@@ -26,7 +30,7 @@ public class MovieService implements ApplicationRunner{
 	@Override
 	public void run(ApplicationArguments args) throws Exception {
 		
-		Path path = Paths.get("movielist.csv");
+		Path path = Paths.get(caminho);
 		
 		try (Stream<String> linhas = Files.lines(path, StandardCharsets.UTF_8)) {
 	
