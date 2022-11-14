@@ -8,13 +8,27 @@ public class DadosResult {
 	private Integer followingWin;
 
 	public DadosResult(String producer, Integer interval, Integer previousWin, Integer followingWin) {
-		super();
 		this.producer = producer;
 		this.interval = interval;
 		this.previousWin = previousWin;
 		this.followingWin = followingWin;
 	}
-
+	
+	public DadosResult() {
+		
+	}
+	public void setProducer(String producer) {
+		this.producer = producer;
+	}
+	public void setInterval(Integer interval) {
+		this.interval = interval;
+	}
+	public void setPreviousWin(Integer previousWin) {
+		this.previousWin = previousWin;
+	}
+	public void setFollowingWin(Integer followingWin) {
+		this.followingWin = followingWin;
+	}
 	public String getProducer() {
 		return producer;
 	}
